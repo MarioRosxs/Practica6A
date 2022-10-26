@@ -12,9 +12,9 @@ package com.mycompany.mastermmind;
 public class Mastermmind {
 
     public static void main(String[] args) {
-        Tablero tablero = new Tablero();
-        tablero.generarColores();
-        tablero.dibujarTablero();
+        JuegoControl juego = new JuegoControl();
+        juego.jugar();
+        juego.repartirPuntos(); 
         
     }
 }

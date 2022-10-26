@@ -62,5 +62,31 @@ public class Tablero{
             x3+=40;
         }
     }
+        //Método que dibuja los intentos del jugador
+    public void dibujarCodigo(int y,ArrayList<String> paint){
+        int x=5;
+        for(int i=0;i<6;i++){
+            myCanvas.fillCircle(x, y, 35, pintura.get(paint.get(i)));
+            x+=40;
+        }
+    }
+    
+    //Método que modela la retroalimentación en cuanto a aciertos y errores
+    public void dibujarRetroalimentacion(int y,ArrayList<String> paint){
+        int x=245;
+        for(int i=0;i<paint.size();i++){
+            myCanvas.fillCircle(x, y, 20, pintura.get(paint.get(i)));
+            x+=22;
+        }
+    }
+    
+    //este metodo dibuja el codigo secreto
+    public void mostrarCombinacionEscondida(int turn,ArrayList<String> paint){
+        int x=150;
+        for(int i=0;i<turn;i++){
+            myCanvas.fillCircle(x, 710, 35, pintura.get(paint.get(i)));
+            x+=40;
+        }
+    }
 }
 
